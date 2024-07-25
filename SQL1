@@ -1,0 +1,13 @@
+create table dept2225(deptid number(3) contraint dept2225_deptid_pk primary key , deptname varchar(10));
+desc dept2225
+create table dept2225(empno number(3) contraint emp2225_empid_pk primary key , ename varchar2(10), 
+
+deptid number(3));
+desc emp2225
+alter table emp2225 add constraint dept2225_deptid_fk foreign key (deptid) references dept2225(deptid);
+insert into emp2225 values('201','Kishore','100');
+insert into emp2225 values('202','Krishna','101');
+insert into emp2225 values('203','Gokul','102');
+insert into emp2225 values('204','Ranjith','103');
+insert into emp2225 values('205','Kishore','104');
+select*from emp2225;
