@@ -1,13 +1,27 @@
-create table dept2225(deptid number(3) contraint dept2225_deptid_pk primary key , deptname varchar(10));
-desc dept2225
-create table dept2225(empno number(3) contraint emp2225_empid_pk primary key , ename varchar2(10), 
+CREATE TABLE dept2225 (
+  deptid NUMBER(3) CONSTRAINT dept2225_deptid_pk PRIMARY KEY,
+  deptname VARCHAR2(10)
+);
 
-deptid number(3));
-desc emp2225
-alter table emp2225 add constraint dept2225_deptid_fk foreign key (deptid) references dept2225(deptid);
-insert into emp2225 values('201','Kishore','100');
-insert into emp2225 values('202','Krishna','101');
-insert into emp2225 values('203','Gokul','102');
-insert into emp2225 values('204','Ranjith','103');
-insert into emp2225 values('205','Kishore','104');
-select*from emp2225;
+CREATE TABLE emp2225 (
+  empno NUMBER(3) CONSTRAINT emp2225_empid_pk PRIMARY KEY,
+  ename VARCHAR2(10),
+  deptid NUMBER(3)
+);
+
+ALTER TABLE emp2225
+ADD CONSTRAINT dept2225_deptid_fk FOREIGN KEY (deptid) REFERENCES dept2225(deptid);
+
+INSERT INTO dept2225 VALUES (100, 'Sales');
+INSERT INTO dept2225 VALUES (101, 'Marketing');
+INSERT INTO dept2225 VALUES (102, 'IT');
+INSERT INTO dept2225 VALUES (103, 'HR');
+INSERT INTO dept2225 VALUES (104, 'Finance');
+
+INSERT INTO emp2225 VALUES (201, 'Kishore', 100);
+INSERT INTO emp2225 VALUES (202, 'Krishna', 101);
+INSERT INTO emp2225 VALUES (203, 'Gokul', 102);
+INSERT INTO emp2225 VALUES (204, 'Ranjith', 103);
+INSERT INTO emp2225 VALUES (205, 'Kishore', 104);
+
+SELECT * FROM emp2225;
