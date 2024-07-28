@@ -8,6 +8,9 @@ UPDATE emp22025
   SET ename = 'naveen'
   WHERE empno = 205;
 
+DELETE FROM emp22025
+  WHERE empno = 202;
+
 SELECT * FROM emp22025;
 
 SELECT MIN(SAL), MAX(SAL), AVG(SAL) FROM emp22025;
