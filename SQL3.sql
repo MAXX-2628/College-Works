@@ -1,0 +1,15 @@
+SELECT * FROM emp22025;
+
+UPDATE emp22025
+  SET doj = '2004-10-19'
+  WHERE empno = 204;
+
+UPDATE emp22025
+  SET ename = 'naveen'
+  WHERE empno = 205;
+
+SELECT * FROM emp22025;
+
+SELECT MIN(SAL), MAX(SAL), AVG(SAL) FROM emp22025;
+
+COMMIT;
