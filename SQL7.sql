@@ -2,7 +2,7 @@ VARIABLE input_str VARCHAR2(100);
  
 BEGIN 
     :input_str := ‘&1’;  
-    DECLARE 
+DECLARE 
         Reversed_str VARCHAR2(100) := ‘’; 
         Is_palindrome BOOLEAN := TRUE; 
         I NUMBER; 
