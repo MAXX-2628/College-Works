@@ -1,6 +1,6 @@
 VARIABLE
   input_str VARCHAR2(100); 
- BEGIN 
+BEGIN 
   :input_str := ‘&1’;  
 DECLARE 
   Reversed_str VARCHAR2(100) := ‘’; 
